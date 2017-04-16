@@ -1,0 +1,27 @@
+admin_homepage_tester:
+    path:     /tester
+    defaults: { _controller: AdminBundle:Default:index }
+
+admin_homepage_test:
+    path:     /test/{nom}/{id}
+    defaults: { _controller: AdminBundle:Default:test }
+
+admin_homepage_page1:
+    path:     /page1
+    defaults: { _controller: AdminBundle:Default:page1 }
+
+admin_homepage_page2:
+    path:     /page2
+    defaults: { _controller: AdminBundle:Default:page2 }
+
+admin_homepage:
+    path:     /
+    defaults: { _controller: AdminBundle:Admin:dashboard}
+
+admin_gestionCategoriePage:
+    path:     /Categories
+    defaults: { _controller: AdminBundle:Admin:gestionCategoriePage}
+
+admin_ajoutCategoriePage:
+    path:     /Categories/Ajout
+    defaults: { _controller: AdminBundle:Admin:ajoutCategoriePage}

@@ -1,0 +1,46 @@
+{% extends 'layout/layoutAdmin.html.twig' %}
+
+    {% block title %}Dashboad{% endblock %}
+
+
+{% block bread %}
+
+
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-sm-4">
+            <h2>Gestion catégories</h2>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="{{ path('admin_homepage') }}">Admin</a>
+                </li>
+                <li class="active">
+                    <strong>Gestion Catégories</strong>
+                </li>
+            </ol>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+
+
+
+{% block body %}
+
+
+
+
+    <div class="wrapper wrapper-content">
+        <div class="middle-box text-center animated fadeInRightBig">
+            <h3 class="font-bold">This is page content</h3>
+            <div class="error-desc">
+                Gestion Catégories
+
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
