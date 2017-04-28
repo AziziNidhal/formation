@@ -25,3 +25,11 @@ admin_gestionCategoriePage:
 admin_ajoutCategoriePage:
     path:     /Categories/Ajout
     defaults: { _controller: AdminBundle:Admin:ajoutCategoriePage}
+
+ajouterCategorie:
+    path:     /ajouterCategorie/{nom}/{description}
+    defaults: { _controller: AdminBundle:Admin:ajouterCategorie}
+
+suppCategorie:
+    path:     /suppCategorie/{nom}
+    defaults: { _controller: AdminBundle:Admin:suppCategorie}
