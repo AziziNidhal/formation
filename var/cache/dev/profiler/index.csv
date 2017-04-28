@@ -1,0 +1,10 @@
+8643b3,127.0.0.1,GET,http://localhost/formation/web/app_dev.php/,1493417083,,200
+91d02d,127.0.0.1,GET,http://localhost/formation/web/app_dev.php/Admin,1493417091,,301
+cc87f3,127.0.0.1,GET,http://localhost/formation/web/app_dev.php/Admin/,1493417091,,302
+501b93,127.0.0.1,GET,http://localhost/formation/web/app_dev.php/login,1493417091,,200
+517748,127.0.0.1,POST,http://localhost/formation/web/app_dev.php/login_check,1493417098,,302
+01f31e,127.0.0.1,GET,http://localhost/formation/web/app_dev.php/login,1493417098,,200
+6944fb,127.0.0.1,POST,http://localhost/formation/web/app_dev.php/login_check,1493417190,,302
+bcfad2,127.0.0.1,GET,http://localhost/formation/web/app_dev.php/Admin/,1493417190,,200
+300073,127.0.0.1,GET,http://localhost/formation/web/app_dev.php/Admin/skin-config.html,1493417190,228971,200
+228971,127.0.0.1,GET,http://localhost/formation/web/app_dev.php/Admin/skin-config.html,1493417190,,404
