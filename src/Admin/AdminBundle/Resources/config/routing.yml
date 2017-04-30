@@ -33,3 +33,9 @@ ajouterCategorie:
 suppCategorie:
     path:     /suppCategorie/{nom}
     defaults: { _controller: AdminBundle:Admin:suppCategorie}
+
+
+
+ajoutCategorie:
+    path:     /Categories/ajoutCategorie
+    defaults: { _controller: AdminBundle:Admin:ajoutCategorie}

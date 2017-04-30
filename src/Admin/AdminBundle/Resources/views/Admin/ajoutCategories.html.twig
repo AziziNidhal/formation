@@ -34,16 +34,142 @@
 
 
 
-    <div class="wrapper wrapper-content">
-        <div class="middle-box text-center animated fadeInRightBig">
-            <h3 class="font-bold">This is page content</h3>
-            <div class="error-desc">
-                Ajout Catégories
+    <div class="wrapper wrapper-content" ng-controller="ajoutCatCtrl">
+        <div class=" animated fadeInRightBig">
 
+
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Les coordonnées de la nouvelle catégorie</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content" ng-init="chargementAjout = false">
+
+                    <div class="spiner-example" ng-show="chargementAjout">
+                        <div class="sk-spinner sk-spinner-chasing-dots">
+                            <div class="sk-dot1"></div>
+                            <div class="sk-dot2"></div>
+                        </div>
+                    </div>
+
+                    <form method="get" class="form-horizontal" name="formAjoutCat" ng-hide="chargementAjout">
+                        <div class="form-group"><label class="col-sm-2 control-label">Nom :</label>
+
+                            <div class="col-sm-10"><input placeholder="Nom de la catégorie" required pattern="[a-zA-Z0-9 ]*" ng-model="txtNom" type="text" class="form-control"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                         <div class="form-group"><label class="col-sm-2 control-label">Description :</label>
+
+                            <div class="col-sm-10"><textarea type="text" ng-model="txtDesc" placeholder="Description de la catégorie" class="form-control" rows="5"></textarea></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <div class="col-sm-4 col-sm-offset-2">
+                                <button class="btn btn-primary" type="submit" ng-click="ajouterCategorie(formAjoutCat)">Enregistrer</button>
+
+                                <a href="{{ path('admin_gestionCategoriePage') }}" class="btn btn-white" type="submit">Annuler</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
+
+
+
+
+
         </div>
     </div>
 
 
 
 {% endblock %}
+
+
+
+
+{% block angular %}
+    <script>
+
+
+        appAdmin.controller("ajoutCatCtrl",function($scope,$http){
+
+
+
+            $scope.initFormulaire = function(){
+                $scope.txtNom = "";
+                $scope.txtDesc = "";
+            }
+
+            $scope.initFormulaire();
+
+
+            $scope.ajouterCategorie = function(form){
+
+                if(form.$valid){
+
+
+                    $scope.chargementAjout = true;
+
+                    $scope.objToSend = {
+                        nom:$scope.txtNom,
+                        desc:$scope.txtDesc
+                    }
+
+
+
+                    $http.post("http://localhost/formation/web/app_dev.php/Admin/Categories/ajoutCategorie",$scope.objToSend)
+                            .then(function(response){
+
+
+
+                                $scope.chargementAjout = false;
+
+                                if(response.data.success){
+                                    toastr.success(response.data.message,"Ajout Catégorie");
+
+                                    $scope.initFormulaire();
+
+                                }else{
+                                    toastr.warning(response.data.message,"Ajout Catégorie");
+
+                                }
+
+
+
+
+
+                            })
+
+
+
+                }else{
+
+                    toastr.warning('Form non valid','Formulaire!')
+
+
+                }
+
+
+
+
+            }
+
+
+
+        });
+
+
+    </script>
+
+
+{% endblock %}
+

@@ -4,6 +4,8 @@ namespace Admin\AdminBundle\Controller;
 
 use Admin\AdminBundle\Entity\Categorie;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 
 class AdminController extends Controller
 {
@@ -31,6 +33,9 @@ class AdminController extends Controller
 
         return $this->render('AdminBundle:Admin:ajoutCategories.html.twig');
     }
+
+
+    /*
 
 
 
@@ -66,6 +71,9 @@ class AdminController extends Controller
     }
 
 
+    */
+
+
 
     public function suppCategorieAction($nom){
 
@@ -84,6 +92,77 @@ class AdminController extends Controller
         }
 
         die("N existe pas");
+
+
+
+    }
+
+
+
+
+    public function ajoutCategorieAction(Request $request){
+
+
+
+        if($request->getMethod() == "POST"){
+
+
+            $em = $this->getDoctrine()->getManager();
+
+            $dataJson = json_decode($request->getContent() , true);
+
+
+            $nom = $dataJson["nom"];
+
+            $desc = $dataJson["desc"];
+
+
+            $verifExsit = $em->getRepository("AdminBundle:Categorie")->findOneBy(array("nom"=>$nom));
+
+
+            $rep = array();
+            if(!$verifExsit){
+
+
+
+
+                $categorie = new Categorie();
+
+                $categorie->setNom($nom)->setDescription($desc);
+
+
+                $em->persist($categorie);
+
+                $em->flush();
+
+                $rep["success"]=1;
+                $rep["message"] = "Catégorie ajoutée avec succes";
+
+
+
+
+
+            }else{
+                $rep["success"]=0;
+                $rep["message"] = "Catégorie existe déja";
+
+
+            }
+
+
+
+            return new JsonResponse($rep);
+
+
+
+
+        }else{
+
+
+
+            die("route non disponible");
+        }
+
 
 
 
