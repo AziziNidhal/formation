@@ -218,6 +218,37 @@ class AdminController extends Controller
 
 
 
+    public function deleteCategorieJsonAction($id){
+
+
+            $em = $this->getDoctrine()->getManager();
+
+
+            $categorie = $em->getRepository("AdminBundle:Categorie")->findOneBy(array("id"=>$id));
+
+            $rep=array();
+
+            if($categorie){
+
+                $em->remove($categorie);
+                $em->flush();
+
+                $rep["success"] = 1;
+                $rep["message"] = "Catégorie supprimée avec succes";
+
+
+            }else{
+
+                $rep["success"] = 0;
+                $rep["message"] = "Catégorie inéxistante";
+
+            }
+
+            return new JsonResponse($rep);
+
+    }
+
+
 
 
 }

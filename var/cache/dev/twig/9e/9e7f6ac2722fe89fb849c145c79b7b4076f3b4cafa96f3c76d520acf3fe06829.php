@@ -24,47 +24,47 @@ class __TwigTemplate_d67b492aebafcd5f8ab65d887049fd9f778babe4069922cd9ffcb861388
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_09fe346084e7d6ffaad55845de923a1b8ecdec31402fe516917168db46ae7cd8 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_09fe346084e7d6ffaad55845de923a1b8ecdec31402fe516917168db46ae7cd8->enter($__internal_09fe346084e7d6ffaad55845de923a1b8ecdec31402fe516917168db46ae7cd8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Admin:gestionCategories.html.twig"));
+        $__internal_cde43e323352527c7dce020759e59a34f735f773650cd3c8debd02ad4afe50e2 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_cde43e323352527c7dce020759e59a34f735f773650cd3c8debd02ad4afe50e2->enter($__internal_cde43e323352527c7dce020759e59a34f735f773650cd3c8debd02ad4afe50e2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Admin:gestionCategories.html.twig"));
 
-        $__internal_e184b0d062e0d500deb3f571332c471c7a10c2157784bb985dbea081e6da2eb4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e184b0d062e0d500deb3f571332c471c7a10c2157784bb985dbea081e6da2eb4->enter($__internal_e184b0d062e0d500deb3f571332c471c7a10c2157784bb985dbea081e6da2eb4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Admin:gestionCategories.html.twig"));
+        $__internal_a3e67b5942a51cae08f3a97d8fefbbf6838cbff08c3f39a90a6f06a2e8cdc9a3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a3e67b5942a51cae08f3a97d8fefbbf6838cbff08c3f39a90a6f06a2e8cdc9a3->enter($__internal_a3e67b5942a51cae08f3a97d8fefbbf6838cbff08c3f39a90a6f06a2e8cdc9a3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Admin:gestionCategories.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_09fe346084e7d6ffaad55845de923a1b8ecdec31402fe516917168db46ae7cd8->leave($__internal_09fe346084e7d6ffaad55845de923a1b8ecdec31402fe516917168db46ae7cd8_prof);
+        $__internal_cde43e323352527c7dce020759e59a34f735f773650cd3c8debd02ad4afe50e2->leave($__internal_cde43e323352527c7dce020759e59a34f735f773650cd3c8debd02ad4afe50e2_prof);
 
         
-        $__internal_e184b0d062e0d500deb3f571332c471c7a10c2157784bb985dbea081e6da2eb4->leave($__internal_e184b0d062e0d500deb3f571332c471c7a10c2157784bb985dbea081e6da2eb4_prof);
+        $__internal_a3e67b5942a51cae08f3a97d8fefbbf6838cbff08c3f39a90a6f06a2e8cdc9a3->leave($__internal_a3e67b5942a51cae08f3a97d8fefbbf6838cbff08c3f39a90a6f06a2e8cdc9a3_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_b24380fe4261789d59e9150cf1e4fddc75556d90ea0a6bd9b57cfc120737fee7 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_b24380fe4261789d59e9150cf1e4fddc75556d90ea0a6bd9b57cfc120737fee7->enter($__internal_b24380fe4261789d59e9150cf1e4fddc75556d90ea0a6bd9b57cfc120737fee7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_079df296d951057f1621359ed00bca076690b15930c830e2f97c9a6b202ac183 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_079df296d951057f1621359ed00bca076690b15930c830e2f97c9a6b202ac183->enter($__internal_079df296d951057f1621359ed00bca076690b15930c830e2f97c9a6b202ac183_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_99d963f4486c385d5fbdf75b002c07629ccd4bb7c404defcc04ee5306465e9b3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_99d963f4486c385d5fbdf75b002c07629ccd4bb7c404defcc04ee5306465e9b3->enter($__internal_99d963f4486c385d5fbdf75b002c07629ccd4bb7c404defcc04ee5306465e9b3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_e124196bf64e610832b44c3175fc7e3d48077e78d94b0725a604f1e8cc3f7e42 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e124196bf64e610832b44c3175fc7e3d48077e78d94b0725a604f1e8cc3f7e42->enter($__internal_e124196bf64e610832b44c3175fc7e3d48077e78d94b0725a604f1e8cc3f7e42_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Dashboad";
         
-        $__internal_99d963f4486c385d5fbdf75b002c07629ccd4bb7c404defcc04ee5306465e9b3->leave($__internal_99d963f4486c385d5fbdf75b002c07629ccd4bb7c404defcc04ee5306465e9b3_prof);
+        $__internal_e124196bf64e610832b44c3175fc7e3d48077e78d94b0725a604f1e8cc3f7e42->leave($__internal_e124196bf64e610832b44c3175fc7e3d48077e78d94b0725a604f1e8cc3f7e42_prof);
 
         
-        $__internal_b24380fe4261789d59e9150cf1e4fddc75556d90ea0a6bd9b57cfc120737fee7->leave($__internal_b24380fe4261789d59e9150cf1e4fddc75556d90ea0a6bd9b57cfc120737fee7_prof);
+        $__internal_079df296d951057f1621359ed00bca076690b15930c830e2f97c9a6b202ac183->leave($__internal_079df296d951057f1621359ed00bca076690b15930c830e2f97c9a6b202ac183_prof);
 
     }
 
     // line 6
     public function block_bread($context, array $blocks = array())
     {
-        $__internal_6521db0092d7868a0d2997cfe3bc703c76d1cdec8ccaf149c100db8e1bfecc76 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_6521db0092d7868a0d2997cfe3bc703c76d1cdec8ccaf149c100db8e1bfecc76->enter($__internal_6521db0092d7868a0d2997cfe3bc703c76d1cdec8ccaf149c100db8e1bfecc76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "bread"));
+        $__internal_382c7fc54e6323ab81fede2cbfb23ade7c4a21db62f2fa56d6e71324d8935d01 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_382c7fc54e6323ab81fede2cbfb23ade7c4a21db62f2fa56d6e71324d8935d01->enter($__internal_382c7fc54e6323ab81fede2cbfb23ade7c4a21db62f2fa56d6e71324d8935d01_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "bread"));
 
-        $__internal_11498a9261bfce8e3f71bc6dcdba79cfc6c477204b828372c3784f4cb6173e12 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_11498a9261bfce8e3f71bc6dcdba79cfc6c477204b828372c3784f4cb6173e12->enter($__internal_11498a9261bfce8e3f71bc6dcdba79cfc6c477204b828372c3784f4cb6173e12_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "bread"));
+        $__internal_2df00f4c839063dfac10d57588d51910a9f6b22ee636ee297dd6156979a6c4a7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2df00f4c839063dfac10d57588d51910a9f6b22ee636ee297dd6156979a6c4a7->enter($__internal_2df00f4c839063dfac10d57588d51910a9f6b22ee636ee297dd6156979a6c4a7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "bread"));
 
         // line 7
         echo "
@@ -89,21 +89,21 @@ class __TwigTemplate_d67b492aebafcd5f8ab65d887049fd9f778babe4069922cd9ffcb861388
 
 ";
         
-        $__internal_11498a9261bfce8e3f71bc6dcdba79cfc6c477204b828372c3784f4cb6173e12->leave($__internal_11498a9261bfce8e3f71bc6dcdba79cfc6c477204b828372c3784f4cb6173e12_prof);
+        $__internal_2df00f4c839063dfac10d57588d51910a9f6b22ee636ee297dd6156979a6c4a7->leave($__internal_2df00f4c839063dfac10d57588d51910a9f6b22ee636ee297dd6156979a6c4a7_prof);
 
         
-        $__internal_6521db0092d7868a0d2997cfe3bc703c76d1cdec8ccaf149c100db8e1bfecc76->leave($__internal_6521db0092d7868a0d2997cfe3bc703c76d1cdec8ccaf149c100db8e1bfecc76_prof);
+        $__internal_382c7fc54e6323ab81fede2cbfb23ade7c4a21db62f2fa56d6e71324d8935d01->leave($__internal_382c7fc54e6323ab81fede2cbfb23ade7c4a21db62f2fa56d6e71324d8935d01_prof);
 
     }
 
     // line 29
     public function block_body($context, array $blocks = array())
     {
-        $__internal_8b8fcadca7204c219e03268770e43e1f26d6ac6d07fcfb7b8c09a092496038df = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_8b8fcadca7204c219e03268770e43e1f26d6ac6d07fcfb7b8c09a092496038df->enter($__internal_8b8fcadca7204c219e03268770e43e1f26d6ac6d07fcfb7b8c09a092496038df_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_8650bd4d84fa446e9a145bb3e2b14f5378b57446d85338804d96bd00fde7920a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_8650bd4d84fa446e9a145bb3e2b14f5378b57446d85338804d96bd00fde7920a->enter($__internal_8650bd4d84fa446e9a145bb3e2b14f5378b57446d85338804d96bd00fde7920a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_84ebb331ceaced92525ca412424a278f241e4c2c0d377f98443e8c9555ff0514 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_84ebb331ceaced92525ca412424a278f241e4c2c0d377f98443e8c9555ff0514->enter($__internal_84ebb331ceaced92525ca412424a278f241e4c2c0d377f98443e8c9555ff0514_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_edd6a65c7f003fd9676fa1538de0ee47701f4e3fbc5cc7a6ec81ce9897b7ff3f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_edd6a65c7f003fd9676fa1538de0ee47701f4e3fbc5cc7a6ec81ce9897b7ff3f->enter($__internal_edd6a65c7f003fd9676fa1538de0ee47701f4e3fbc5cc7a6ec81ce9897b7ff3f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 30
         echo "
@@ -154,7 +154,8 @@ class __TwigTemplate_d67b492aebafcd5f8ab65d887049fd9f778babe4069922cd9ffcb861388
                         <div class=\"contact-box-footer\">
                             <div class=\"m-t-xs btn-group\">
                                 <a class=\"btn btn-xs btn-white\"><i class=\"fa fa-pencil\"></i> Modifier </a>
-                                <a class=\"btn btn-xs btn-white\"><i class=\"fa fa-close\"></i> Supprimer</a>
+                                <a class=\"btn btn-xs btn-white\" ng-click=\"openModalDel(categorie.id,categorie.nom)\" ><i class=\"fa fa-close\"></i> Supprimer</a>
+
                             </div>
                         </div>
 
@@ -168,35 +169,72 @@ class __TwigTemplate_d67b492aebafcd5f8ab65d887049fd9f778babe4069922cd9ffcb861388
 
 
         </div>
+
+
+
+
+
+        <div class=\"modal inmodal fade\" id=\"modalDelete\" tabindex=\"-1\" role=\"dialog\"  aria-hidden=\"true\">
+            <div class=\"modal-dialog modal-sm\">
+                <div class=\"modal-content\">
+                    <div class=\"modal-header\">
+                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\"><span aria-hidden=\"true\">&times;</span><span class=\"sr-only\">Close</span></button>
+                        <h4 class=\"modal-title\">Suppression</h4>
+                    </div>
+                    <div class=\"modal-body\">
+                        <h3>
+                            Vous etes sûr de <strong>supprimer</strong> la catégorie <span ng-bind=\"currentNameToDel\"></span>
+
+
+                        </h3>
+
+
+
+                    </div>
+                    <div class=\"modal-footer\">
+                        <button type=\"button\" class=\"btn btn-danger\" ng-click=\"deleteCategorie(currentIdToDel)\">Supprimer</button>
+                        <button type=\"button\" class=\"btn btn-white\" data-dismiss=\"modal\">Annuler</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
     </div>
 
 
 
 ";
         
-        $__internal_84ebb331ceaced92525ca412424a278f241e4c2c0d377f98443e8c9555ff0514->leave($__internal_84ebb331ceaced92525ca412424a278f241e4c2c0d377f98443e8c9555ff0514_prof);
+        $__internal_edd6a65c7f003fd9676fa1538de0ee47701f4e3fbc5cc7a6ec81ce9897b7ff3f->leave($__internal_edd6a65c7f003fd9676fa1538de0ee47701f4e3fbc5cc7a6ec81ce9897b7ff3f_prof);
 
         
-        $__internal_8b8fcadca7204c219e03268770e43e1f26d6ac6d07fcfb7b8c09a092496038df->leave($__internal_8b8fcadca7204c219e03268770e43e1f26d6ac6d07fcfb7b8c09a092496038df_prof);
+        $__internal_8650bd4d84fa446e9a145bb3e2b14f5378b57446d85338804d96bd00fde7920a->leave($__internal_8650bd4d84fa446e9a145bb3e2b14f5378b57446d85338804d96bd00fde7920a_prof);
 
     }
 
-    // line 97
+    // line 131
     public function block_angular($context, array $blocks = array())
     {
-        $__internal_864cffef091f8e9990f5ad15b9248062c6d0c3eeb459c8e048630c225e9fad1d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_864cffef091f8e9990f5ad15b9248062c6d0c3eeb459c8e048630c225e9fad1d->enter($__internal_864cffef091f8e9990f5ad15b9248062c6d0c3eeb459c8e048630c225e9fad1d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "angular"));
+        $__internal_e098835ee57ea6fc8e88750a5bc6ea99258053fa5791e59d0ddaf331696e506b = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_e098835ee57ea6fc8e88750a5bc6ea99258053fa5791e59d0ddaf331696e506b->enter($__internal_e098835ee57ea6fc8e88750a5bc6ea99258053fa5791e59d0ddaf331696e506b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "angular"));
 
-        $__internal_329ea514b1c2996feda740e0572702453ffde8abe6e7ca802dfea8118c2b130d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_329ea514b1c2996feda740e0572702453ffde8abe6e7ca802dfea8118c2b130d->enter($__internal_329ea514b1c2996feda740e0572702453ffde8abe6e7ca802dfea8118c2b130d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "angular"));
+        $__internal_0449b6bb9057f83abfb5af1ba1df0fd19fc961e1364f086aac02c6e0fba65027 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0449b6bb9057f83abfb5af1ba1df0fd19fc961e1364f086aac02c6e0fba65027->enter($__internal_0449b6bb9057f83abfb5af1ba1df0fd19fc961e1364f086aac02c6e0fba65027_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "angular"));
 
-        // line 98
+        // line 132
         echo "    <script>
 
 
         appAdmin.controller(\"gestionCatCtrl\",function(\$scope,\$http){
             \$scope.categories=[];
             \$scope.txtSearch=\"\";
+
+            \$scope.currentNameToDel = \"\";
+            \$scope.currentIdToDel = 0;
+
             \$scope.getCategories = function(txtChange){
 
 
@@ -216,7 +254,7 @@ class __TwigTemplate_d67b492aebafcd5f8ab65d887049fd9f778babe4069922cd9ffcb861388
 
 
 
-                \$http.post(\"http://localhost/formation/web/app_dev.php/Admin/Categories/getCategoriesJson\",\$scope.objToSend)
+                \$http.post(\"http://172.16.128.8/formation/web/app_dev.php/Admin/Categories/getCategoriesJson\",\$scope.objToSend)
                         .then(function (response) {
 
                             \$scope.categories = response.data;
@@ -226,9 +264,46 @@ class __TwigTemplate_d67b492aebafcd5f8ab65d887049fd9f778babe4069922cd9ffcb861388
 
             }
 
-            \$scope.getCategories();
+            \$scope.getCategories(\$scope.txtSearch);
 
 
+            setInterval(function(){
+                \$scope.getCategories(\$scope.txtSearch);
+
+            },3000);
+
+
+
+            \$scope.openModalDel = function(id,nom){
+
+                \$scope.currentNameToDel = nom;
+                \$scope.currentIdToDel = id;
+                \$(\"#modalDelete\").modal('show');
+            }
+
+            \$scope.deleteCategorie = function(id){
+
+
+                \$scope.urlDel = \"http://172.16.128.8/formation/web/app_dev.php/Admin/Categories/deleteCategorieJson/\" + id ;
+
+                \$http.post(\$scope.urlDel)
+                        .then(function (reponse) {
+
+                            if(reponse.data.success){
+                                toastr.success(reponse.data.message,\"Suppression\");
+                            }else{
+                                toastr.error(reponse.data.message,\"Suppression\");
+                            }
+
+                            \$scope.getCategories(\$scope.txtSearch);
+                            \$(\"#modalDelete\").modal('hide');
+
+                        });
+
+
+
+
+            }
 
 
 
@@ -247,10 +322,10 @@ class __TwigTemplate_d67b492aebafcd5f8ab65d887049fd9f778babe4069922cd9ffcb861388
 
 ";
         
-        $__internal_329ea514b1c2996feda740e0572702453ffde8abe6e7ca802dfea8118c2b130d->leave($__internal_329ea514b1c2996feda740e0572702453ffde8abe6e7ca802dfea8118c2b130d_prof);
+        $__internal_0449b6bb9057f83abfb5af1ba1df0fd19fc961e1364f086aac02c6e0fba65027->leave($__internal_0449b6bb9057f83abfb5af1ba1df0fd19fc961e1364f086aac02c6e0fba65027_prof);
 
         
-        $__internal_864cffef091f8e9990f5ad15b9248062c6d0c3eeb459c8e048630c225e9fad1d->leave($__internal_864cffef091f8e9990f5ad15b9248062c6d0c3eeb459c8e048630c225e9fad1d_prof);
+        $__internal_e098835ee57ea6fc8e88750a5bc6ea99258053fa5791e59d0ddaf331696e506b->leave($__internal_e098835ee57ea6fc8e88750a5bc6ea99258053fa5791e59d0ddaf331696e506b_prof);
 
     }
 
@@ -266,7 +341,7 @@ class __TwigTemplate_d67b492aebafcd5f8ab65d887049fd9f778babe4069922cd9ffcb861388
 
     public function getDebugInfo()
     {
-        return array (  194 => 98,  185 => 97,  141 => 60,  109 => 30,  100 => 29,  79 => 14,  70 => 7,  61 => 6,  43 => 3,  11 => 1,);
+        return array (  228 => 132,  219 => 131,  141 => 60,  109 => 30,  100 => 29,  79 => 14,  70 => 7,  61 => 6,  43 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -353,7 +428,8 @@ class __TwigTemplate_d67b492aebafcd5f8ab65d887049fd9f778babe4069922cd9ffcb861388
                         <div class=\"contact-box-footer\">
                             <div class=\"m-t-xs btn-group\">
                                 <a class=\"btn btn-xs btn-white\"><i class=\"fa fa-pencil\"></i> Modifier </a>
-                                <a class=\"btn btn-xs btn-white\"><i class=\"fa fa-close\"></i> Supprimer</a>
+                                <a class=\"btn btn-xs btn-white\" ng-click=\"openModalDel(categorie.id,categorie.nom)\" ><i class=\"fa fa-close\"></i> Supprimer</a>
+
                             </div>
                         </div>
 
@@ -367,6 +443,39 @@ class __TwigTemplate_d67b492aebafcd5f8ab65d887049fd9f778babe4069922cd9ffcb861388
 
 
         </div>
+
+
+
+
+
+        <div class=\"modal inmodal fade\" id=\"modalDelete\" tabindex=\"-1\" role=\"dialog\"  aria-hidden=\"true\">
+            <div class=\"modal-dialog modal-sm\">
+                <div class=\"modal-content\">
+                    <div class=\"modal-header\">
+                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\"><span aria-hidden=\"true\">&times;</span><span class=\"sr-only\">Close</span></button>
+                        <h4 class=\"modal-title\">Suppression</h4>
+                    </div>
+                    <div class=\"modal-body\">
+                        <h3>
+                            Vous etes sûr de <strong>supprimer</strong> la catégorie <span ng-bind=\"currentNameToDel\"></span>
+
+
+                        </h3>
+
+
+
+                    </div>
+                    <div class=\"modal-footer\">
+                        <button type=\"button\" class=\"btn btn-danger\" ng-click=\"deleteCategorie(currentIdToDel)\">Supprimer</button>
+                        <button type=\"button\" class=\"btn btn-white\" data-dismiss=\"modal\">Annuler</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
     </div>
 
 
@@ -382,6 +491,10 @@ class __TwigTemplate_d67b492aebafcd5f8ab65d887049fd9f778babe4069922cd9ffcb861388
         appAdmin.controller(\"gestionCatCtrl\",function(\$scope,\$http){
             \$scope.categories=[];
             \$scope.txtSearch=\"\";
+
+            \$scope.currentNameToDel = \"\";
+            \$scope.currentIdToDel = 0;
+
             \$scope.getCategories = function(txtChange){
 
 
@@ -401,7 +514,7 @@ class __TwigTemplate_d67b492aebafcd5f8ab65d887049fd9f778babe4069922cd9ffcb861388
 
 
 
-                \$http.post(\"http://localhost/formation/web/app_dev.php/Admin/Categories/getCategoriesJson\",\$scope.objToSend)
+                \$http.post(\"http://172.16.128.8/formation/web/app_dev.php/Admin/Categories/getCategoriesJson\",\$scope.objToSend)
                         .then(function (response) {
 
                             \$scope.categories = response.data;
@@ -411,9 +524,46 @@ class __TwigTemplate_d67b492aebafcd5f8ab65d887049fd9f778babe4069922cd9ffcb861388
 
             }
 
-            \$scope.getCategories();
+            \$scope.getCategories(\$scope.txtSearch);
 
 
+            setInterval(function(){
+                \$scope.getCategories(\$scope.txtSearch);
+
+            },3000);
+
+
+
+            \$scope.openModalDel = function(id,nom){
+
+                \$scope.currentNameToDel = nom;
+                \$scope.currentIdToDel = id;
+                \$(\"#modalDelete\").modal('show');
+            }
+
+            \$scope.deleteCategorie = function(id){
+
+
+                \$scope.urlDel = \"http://172.16.128.8/formation/web/app_dev.php/Admin/Categories/deleteCategorieJson/\" + id ;
+
+                \$http.post(\$scope.urlDel)
+                        .then(function (reponse) {
+
+                            if(reponse.data.success){
+                                toastr.success(reponse.data.message,\"Suppression\");
+                            }else{
+                                toastr.error(reponse.data.message,\"Suppression\");
+                            }
+
+                            \$scope.getCategories(\$scope.txtSearch);
+                            \$(\"#modalDelete\").modal('hide');
+
+                        });
+
+
+
+
+            }
 
 
 

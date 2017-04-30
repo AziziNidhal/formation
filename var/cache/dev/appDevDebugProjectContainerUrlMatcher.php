@@ -106,6 +106,68 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         if (0 === strpos($pathinfo, '/Admin')) {
+            if (0 === strpos($pathinfo, '/Admin/etudiant')) {
+                // etudiant_index
+                if (rtrim($pathinfo, '/') === '/Admin/etudiant') {
+                    if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'HEAD'));
+                        goto not_etudiant_index;
+                    }
+
+                    if (substr($pathinfo, -1) !== '/') {
+                        return $this->redirect($pathinfo.'/', 'etudiant_index');
+                    }
+
+                    return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\EtudiantController::indexAction',  '_route' => 'etudiant_index',);
+                }
+                not_etudiant_index:
+
+                // etudiant_show
+                if (preg_match('#^/Admin/etudiant/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'HEAD'));
+                        goto not_etudiant_show;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'etudiant_show')), array (  '_controller' => 'Admin\\AdminBundle\\Controller\\EtudiantController::showAction',));
+                }
+                not_etudiant_show:
+
+                // etudiant_new
+                if ($pathinfo === '/Admin/etudiant/new') {
+                    if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                        goto not_etudiant_new;
+                    }
+
+                    return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\EtudiantController::newAction',  '_route' => 'etudiant_new',);
+                }
+                not_etudiant_new:
+
+                // etudiant_edit
+                if (preg_match('#^/Admin/etudiant/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                    if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                        $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                        goto not_etudiant_edit;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'etudiant_edit')), array (  '_controller' => 'Admin\\AdminBundle\\Controller\\EtudiantController::editAction',));
+                }
+                not_etudiant_edit:
+
+                // etudiant_delete
+                if (preg_match('#^/Admin/etudiant/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                    if ($this->context->getMethod() != 'DELETE') {
+                        $allow[] = 'DELETE';
+                        goto not_etudiant_delete;
+                    }
+
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'etudiant_delete')), array (  '_controller' => 'Admin\\AdminBundle\\Controller\\EtudiantController::deleteAction',));
+                }
+                not_etudiant_delete:
+
+            }
+
             if (0 === strpos($pathinfo, '/Admin/test')) {
                 // admin_homepage_tester
                 if ($pathinfo === '/Admin/tester') {
@@ -173,6 +235,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 // getCategoriesJson
                 if ($pathinfo === '/Admin/Categories/getCategoriesJson') {
                     return array (  '_controller' => 'Admin\\AdminBundle\\Controller\\AdminController::getCategoriesJsonAction',  '_route' => 'getCategoriesJson',);
+                }
+
+                // deleteCategorieJson
+                if (0 === strpos($pathinfo, '/Admin/Categories/deleteCategorieJson') && preg_match('#^/Admin/Categories/deleteCategorieJson/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'deleteCategorieJson')), array (  '_controller' => 'Admin\\AdminBundle\\Controller\\AdminController::deleteCategorieJsonAction',));
                 }
 
             }

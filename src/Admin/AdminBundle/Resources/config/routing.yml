@@ -1,3 +1,7 @@
+admin_etudiant:
+    resource: "@AdminBundle/Resources/config/routing/etudiant.yml"
+    prefix:   /etudiant
+
 admin_homepage_tester:
     path:     /tester
     defaults: { _controller: AdminBundle:Default:index }
@@ -44,3 +48,8 @@ ajoutCategorie:
 getCategoriesJson:
     path:     /Categories/getCategoriesJson
     defaults: { _controller: AdminBundle:Admin:getCategoriesJson}
+
+
+deleteCategorieJson:
+    path:     /Categories/deleteCategorieJson/{id}
+    defaults: { _controller: AdminBundle:Admin:deleteCategorieJson}

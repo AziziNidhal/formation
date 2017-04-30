@@ -72,7 +72,8 @@
                         <div class="contact-box-footer">
                             <div class="m-t-xs btn-group">
                                 <a class="btn btn-xs btn-white"><i class="fa fa-pencil"></i> Modifier </a>
-                                <a class="btn btn-xs btn-white"><i class="fa fa-close"></i> Supprimer</a>
+                                <a class="btn btn-xs btn-white" ng-click="openModalDel(categorie.id,categorie.nom)" ><i class="fa fa-close"></i> Supprimer</a>
+
                             </div>
                         </div>
 
@@ -86,6 +87,39 @@
 
 
         </div>
+
+
+
+
+
+        <div class="modal inmodal fade" id="modalDelete" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">Suppression</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h3>
+                            Vous etes sûr de <strong>supprimer</strong> la catégorie <span ng-bind="currentNameToDel"></span>
+
+
+                        </h3>
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" ng-click="deleteCategorie(currentIdToDel)">Supprimer</button>
+                        <button type="button" class="btn btn-white" data-dismiss="modal">Annuler</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
     </div>
 
 
@@ -101,6 +135,10 @@
         appAdmin.controller("gestionCatCtrl",function($scope,$http){
             $scope.categories=[];
             $scope.txtSearch="";
+
+            $scope.currentNameToDel = "";
+            $scope.currentIdToDel = 0;
+
             $scope.getCategories = function(txtChange){
 
 
@@ -120,7 +158,7 @@
 
 
 
-                $http.post("http://localhost/formation/web/app_dev.php/Admin/Categories/getCategoriesJson",$scope.objToSend)
+                $http.post("http://172.16.128.8/formation/web/app_dev.php/Admin/Categories/getCategoriesJson",$scope.objToSend)
                         .then(function (response) {
 
                             $scope.categories = response.data;
@@ -130,9 +168,46 @@
 
             }
 
-            $scope.getCategories();
+            $scope.getCategories($scope.txtSearch);
 
 
+            setInterval(function(){
+                $scope.getCategories($scope.txtSearch);
+
+            },3000);
+
+
+
+            $scope.openModalDel = function(id,nom){
+
+                $scope.currentNameToDel = nom;
+                $scope.currentIdToDel = id;
+                $("#modalDelete").modal('show');
+            }
+
+            $scope.deleteCategorie = function(id){
+
+
+                $scope.urlDel = "http://172.16.128.8/formation/web/app_dev.php/Admin/Categories/deleteCategorieJson/" + id ;
+
+                $http.post($scope.urlDel)
+                        .then(function (reponse) {
+
+                            if(reponse.data.success){
+                                toastr.success(reponse.data.message,"Suppression");
+                            }else{
+                                toastr.error(reponse.data.message,"Suppression");
+                            }
+
+                            $scope.getCategories($scope.txtSearch);
+                            $("#modalDelete").modal('hide');
+
+                        });
+
+
+
+
+            }
 
 
 
