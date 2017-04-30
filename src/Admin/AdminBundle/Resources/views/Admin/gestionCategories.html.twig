@@ -31,23 +31,42 @@
 
 
 
-    <div class="wrapper wrapper-content">
+    <div class="wrapper wrapper-content" ng-controller="gestionCatCtrl">
         <div class=" text-center animated fadeInRightBig">
 
+
+
+            <div class="row" ng-init="txtSearch=''">
+
+                <div class="form-group">
+
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10"><input placeholder="Chercher des catégories" ng-model="txtSearch" ng-change="getCategories(txtSearch)" type="text" class="form-control"></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="clearP"></div>
+
+
             <div class="row">
-                <div class="col-lg-3">
-                    <div class="contact-box center-version">
+                <div class="col-lg-3" ng-repeat="categorie in categories" >
+                    <div class="contact-box center-version" style="height: 280px!important;">
 
                         <a href="#">
 
                             <img alt="image" class="img-circle" src="{{ asset('img/a2.jpg') }}">
 
 
-                            <h3 class="m-b-xs"><strong>Nom Categorie</strong></h3>
+                            <h3 class="m-b-xs"><strong ng-bind="categorie.nom"></strong></h3>
 
                             <address class="m-t-md">
-                                Description Description Description Description Description Description Description
+                            <span ng-bind="categorie.desc | limitTo:50"></span>
+                            <span ng-if="categorie.desc.length > 50">...</span>
                             </address>
+
 
                         </a>
                         <div class="contact-box-footer">
@@ -72,3 +91,64 @@
 
 
 {% endblock %}
+
+
+
+{% block angular %}
+    <script>
+
+
+        appAdmin.controller("gestionCatCtrl",function($scope,$http){
+            $scope.categories=[];
+            $scope.txtSearch="";
+            $scope.getCategories = function(txtChange){
+
+
+
+
+
+                if(txtChange == undefined){
+                    $scope.txtRecherche = "";
+                }else{
+                    $scope.txtRecherche = txtChange;
+                }
+
+
+                $scope.objToSend = {
+                    txt : $scope.txtRecherche
+                }
+
+
+
+                $http.post("http://localhost/formation/web/app_dev.php/Admin/Categories/getCategoriesJson",$scope.objToSend)
+                        .then(function (response) {
+
+                            $scope.categories = response.data;
+
+                        });
+
+
+            }
+
+            $scope.getCategories();
+
+
+
+
+
+
+
+
+
+
+
+
+        });
+
+
+    </script>
+
+
+{% endblock %}
+
+

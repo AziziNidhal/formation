@@ -24,6 +24,13 @@
     <script src="{{ asset('angular/angular.min.js') }}"></script>
 
 
+    <style>
+        .clearP{
+            padding: 20px;
+        }
+
+
+    </style>
 
     {% block style %}{% endblock %}
 
@@ -146,7 +153,13 @@
 
 <script>
 
-    var appAdmin = angular.module("appAdmin" , []);
+    var appAdmin = angular.module("appAdmin" , [])
+
+
+    .config(function($interpolateProvider) {
+        $interpolateProvider.startSymbol('%%');
+        $interpolateProvider.endSymbol('%%');
+    });
 
 
 

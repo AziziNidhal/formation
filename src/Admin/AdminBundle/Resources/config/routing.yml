@@ -39,3 +39,8 @@ suppCategorie:
 ajoutCategorie:
     path:     /Categories/ajoutCategorie
     defaults: { _controller: AdminBundle:Admin:ajoutCategorie}
+
+
+getCategoriesJson:
+    path:     /Categories/getCategoriesJson
+    defaults: { _controller: AdminBundle:Admin:getCategoriesJson}

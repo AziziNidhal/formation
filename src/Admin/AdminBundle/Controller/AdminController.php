@@ -171,5 +171,53 @@ class AdminController extends Controller
 
 
 
+    public function getCategoriesJsonAction(Request $request){
+
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $dataJson = json_decode($request->getContent() , true);
+
+        $creteria = $dataJson["txt"];
+
+        $qb = $em->createQueryBuilder();
+
+
+        $query = $qb->select("c")
+        ->from("AdminBundle:Categorie","c");
+
+        if(strlen($creteria) > 2){
+            $query->where("c.nom like :criteria");
+        }
+
+        $query->orderBy("c.id","desc");
+
+        if(strlen($creteria) > 2){
+            $query->setParameter("criteria","%".$creteria."%");
+        }
+
+        $categories = $query->getQuery()->getResult();
+
+
+        $reponse = array();
+        foreach ($categories as $category){
+            array_push(
+                $reponse,
+                array(
+                    "id"=>$category->getId(),
+                    "nom"=>$category->getNom(),
+                    "desc"=>$category->getDescription(),
+                )
+            );
+
+        }
+
+        return new JsonResponse($reponse);
+
+    }
+
+
+
+
+
 
 }
